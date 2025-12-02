@@ -12,12 +12,12 @@ UAnimGraphNode_NodeTest::UAnimGraphNode_NodeTest(const FObjectInitializer& Objec
 
 FText UAnimGraphNode_NodeTest::GetTooltipText() const
 {
-	return LOCTEXT("NodeTestTooltip", "Warp Test Node");
+	return LOCTEXT("NodeTestTooltip", "Test Node");
 }
 
 FText UAnimGraphNode_NodeTest::GetNodeTitle(ENodeTitleType::Type TitleType) const
 {
-	return LOCTEXT("NodeTest", "Warp Test Node");
+	return LOCTEXT("NodeTest", "Test Node");
 }
 
 FLinearColor UAnimGraphNode_NodeTest::GetNodeTitleColor() const
