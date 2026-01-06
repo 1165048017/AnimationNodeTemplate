@@ -10,6 +10,11 @@ UAnimGraphNode_NodeTest::UAnimGraphNode_NodeTest(const FObjectInitializer& Objec
 {
 }
 
+FText UAnimGraphNode_NodeTest::GetControllerDescription() const
+{
+	return LOCTEXT("NodeTestTooltip", "Test Node");
+}
+
 FText UAnimGraphNode_NodeTest::GetTooltipText() const
 {
 	return LOCTEXT("NodeTestTooltip", "Test Node");
@@ -17,12 +22,20 @@ FText UAnimGraphNode_NodeTest::GetTooltipText() const
 
 FText UAnimGraphNode_NodeTest::GetNodeTitle(ENodeTitleType::Type TitleType) const
 {
-	return LOCTEXT("NodeTest", "Test Node");
+	return GetControllerDescription();
 }
 
 FLinearColor UAnimGraphNode_NodeTest::GetNodeTitleColor() const
 {
 	return FLinearColor(FColor(153.f, 0.f, 0.f));
+}
+
+void UAnimGraphNode_NodeTest::Draw(FPrimitiveDrawInterface* PDI, USkeletalMeshComponent* SkelMeshComp) const
+{
+	if (SkelMeshComp)
+	{
+		
+	}
 }
 
 #undef LOCTEXT_NAMESPACE
